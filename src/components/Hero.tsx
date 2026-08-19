@@ -1,6 +1,5 @@
 import { EVENT } from '@/constants';
-import { getFormUrlWithUtm, trackApplyClick } from '@/lib/analytics';
-import { ArrowRight, Calendar, MapPin, Users } from 'lucide-react';
+import { Calendar, MapPin, Users } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -22,9 +21,9 @@ export default function Hero() {
 
           {/* Left: text */}
           <div>
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-accent-400/40 bg-accent-500/10 px-4 py-1.5 text-sm font-bold text-accent-300">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-accent-400" />
-              参加受付中
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-navy-300/40 bg-navy-700/40 px-4 py-1.5 text-sm font-bold text-navy-200">
+              <span className="h-2 w-2 rounded-full bg-navy-300" />
+              参加受付は終了いたしました
             </div>
 
             <img
@@ -62,26 +61,13 @@ export default function Hero() {
             </dl>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <a
-                href={getFormUrlWithUtm()}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackApplyClick('hero')}
-                className="btn-primary text-lg"
-              >
-                参加を申し込む
-                <ArrowRight size={20} />
-              </a>
-              <a
-                href="#overview"
-                className="text-sm font-bold text-navy-100 underline-offset-4 hover:text-white hover:underline"
-              >
-                開催概要を見る
-              </a>
+              <span className="btn-primary text-lg cursor-not-allowed opacity-60">
+                参加受付は終了いたしました
+              </span>
             </div>
 
             <p className="mt-6 text-sm text-navy-200">
-              申込締切：{EVENT.deadline}
+              多数のお申込ありがとうございました
             </p>
           </div>
 

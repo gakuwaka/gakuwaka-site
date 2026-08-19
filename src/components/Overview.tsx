@@ -1,5 +1,4 @@
 import { EVENT } from '@/constants';
-import { getFormUrlWithUtm, trackApplyClick } from '@/lib/analytics';
 import { ArrowRight, Calendar, Clock, MapPin, Users, Wallet, Building2, AlertCircle, type LucideIcon } from 'lucide-react';
 
 export default function Overview() {
@@ -49,19 +48,13 @@ export default function Overview() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-        <p className="mt-2 text-center text-xs text-navy-400">※地図は会場周辺の案内用です。住所詳細は申込後にご案内します。</p>
+        <p className="mt-2 text-center text-xs text-navy-400">※地図は会場周辺の案内用です。</p>
 
         <div className="mt-10 text-center">
-          <a
-            href={getFormUrlWithUtm()}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackApplyClick('overview')}
-            className="btn-primary text-lg"
-          >
-            参加を申し込む
-            <ArrowRight size={20} />
-          </a>
+          <span className="btn-primary text-lg cursor-not-allowed opacity-60">
+            参加受付は終了いたしました
+          </span>
+          <p className="mt-4 text-sm text-navy-400">多数のお申込、誠にありがとうございました</p>
         </div>
       </div>
     </section>

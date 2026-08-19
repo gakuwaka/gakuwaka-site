@@ -8,7 +8,6 @@ import Overview from '@/components/Overview';
 import Target from '@/components/Target';
 import FinalCta from '@/components/FinalCta';
 import Footer from '@/components/Footer';
-import StickyCta from '@/components/StickyCta';
 
 export default function App() {
   return (
@@ -25,7 +24,6 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
-      <StickyCta />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { EVENT } from '@/constants';
-import { getFormUrlWithUtm, trackApplyClick } from '@/lib/analytics';
-import { ArrowRight, Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 export default function FinalCta() {
   return (
@@ -26,8 +25,8 @@ export default function FinalCta() {
             この一日で。
           </h2>
           <p className="mt-5 text-base leading-relaxed text-navy-100">
-            定員{EVENT.capacity}に達し次第、受付を締め切らせていただきます。
-            お早めにお申込ください。
+            本イベントの参加受付は終了いたしました。
+            多数のお申込、誠にありがとうございました。
           </p>
 
           <dl className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
@@ -42,20 +41,10 @@ export default function FinalCta() {
           </dl>
 
           <div className="mt-10">
-            <a
-              href={getFormUrlWithUtm()}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackApplyClick('final_cta')}
-              className="btn-primary text-lg"
-            >
-              参加を申し込む
-              <ArrowRight size={20} />
-            </a>
+            <span className="btn-primary text-lg cursor-not-allowed opacity-60">
+              参加受付は終了いたしました
+            </span>
           </div>
-          <p className="mt-5 text-sm text-navy-300">
-            申込締切：{EVENT.deadline}
-          </p>
         </div>
       </div>
     </section>

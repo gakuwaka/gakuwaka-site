@@ -1,5 +1,4 @@
 import { EVENT } from '@/constants';
-import { getFormUrlWithUtm, trackApplyClick } from '@/lib/analytics';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -51,15 +50,11 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href={getFormUrlWithUtm()}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackApplyClick('header_pc')}
-            className="btn-primary !px-5 !py-2.5 !text-sm"
+          <span
+            className="btn-primary cursor-not-allowed !px-5 !py-2.5 !text-sm opacity-60"
           >
-            参加を申し込む
-          </a>
+            参加受付終了
+          </span>
         </nav>
 
         <button
@@ -89,15 +84,11 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={getFormUrlWithUtm()}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => { setOpen(false); trackApplyClick('header_mobile'); }}
-              className="btn-primary mt-2"
+            <span
+              className="btn-primary mt-2 cursor-not-allowed opacity-60"
             >
-              参加を申し込む
-            </a>
+              参加受付終了
+            </span>
           </nav>
         </div>
       )}
