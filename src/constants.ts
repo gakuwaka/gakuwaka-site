@@ -1,0 +1,27 @@
+export const EVENT = {
+  name: '学士会 若手のための講演会＆交流会（ガクワカ！）',
+  subtitle: '若手のためのキャリア論　〜私らしいキャリアのための次の一歩〜',
+  date: '2026年8月22日(土)',
+  dateShort: '2026.08.22 SAT',
+  time: '13:00〜16:00（開場12:45）',
+  venue: 'TIME SHARING グレイドパーク 新橋駅前 7F',
+  venueAddress: '東京都港区新橋（※住所詳細は申込後にご案内）',
+  capacity: '100名',
+  organizer: '「ガクワカ！」運営（学士会 若手有志）',
+  deadline: '2026年8月18日(火) 23:59',
+  formUrl: 'https://form.jotform.com/261981507652463',
+  fees: [
+    { target: '学部生', price: '2,000円' },
+    { target: '大学院生・社会人（学士会会員）', price: '5,000円' },
+    { target: '大学院生・社会人（学士会非会員）', price: '7,000円' },
+  ],
+  target: '七大学出身かつ30代以下の方',
+  speaker: {
+    name: '大久保 そのみ',
+    title: '日本IBM バイス・プレジデント / 国家資格キャリアコンサルタント',
+    photo: `${import.meta.env.BASE_URL}grok_image_1785621649052.jpg`,
+  },
+  heroImage: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  conceptImage: 'https://images.pexels.com/photos/8355148/pexels-photo-8355148.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  programImage: 'https://images.pexels.com/photos/8761650/pexels-photo-8761650.jpeg?auto=compress&cs=tinysrgb&w=1200',
+};
